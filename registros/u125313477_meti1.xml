@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+- phpMyAdmin XML Dump
+- version 5.2.2
+- https://www.phpmyadmin.net
+-
+- Host: 127.0.0.1
+- Generation Time: Jan 11, 2026 at 05:31 PM
+- Server version: 11.8.3-MariaDB-log
+- PHP Version: 7.2.34
+-->
+
+<pma_xml_export version="1.0" xmlns:pma="https://www.phpmyadmin.net/some_doc_url/">
+    <!--
+    - Structure schemas
+    -->
+    <pma:structure_schemas>
+        <pma:database name="u125313477_meti1" collation="utf8mb4_unicode_ci" charset="utf8mb4">
+            <pma:table name="Clientes">
+                CREATE TABLE `Clientes` (
+                  `id_cliente` int(10) unsigned NOT NULL AUTO_INCREMENT,
+                  `nombre` varchar(50) DEFAULT NULL,
+                  `apellido1` varchar(50) DEFAULT NULL,
+                  `apellido2` varchar(50) DEFAULT NULL,
+                  `telefono` varchar(15) DEFAULT NULL,
+                  `direccion` varchar(50) DEFAULT NULL,
+                  `cp` varchar(10) DEFAULT NULL,
+                  `email` varchar(100) DEFAULT NULL,
+                  PRIMARY KEY (`id_cliente`)
+                ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+            </pma:table>
+            <pma:table name="Facturas">
+                CREATE TABLE `Facturas` (
+                  `id_factura` int(10) unsigned NOT NULL AUTO_INCREMENT,
+                  `Pedidos_id_pedido` int(10) unsigned NOT NULL,
+                  `Clientes_id_cliente` int(10) unsigned NOT NULL,
+                  `descripcion` varchar(50) DEFAULT NULL,
+                  `fecha_factura` date DEFAULT NULL,
+                  `sucursal` enum('Santander','Madrid','Bilbao','Barcelona','Oviedo') DEFAULT NULL,
+                  `importe_factura` decimal(10,2) DEFAULT NULL,
+                  PRIMARY KEY (`id_factura`),
+                  KEY `Clientes_id_cliente` (`Clientes_id_cliente`),
+                  KEY `Pedidos_id_pedido` (`Pedidos_id_pedido`),
+                  CONSTRAINT `Facturas_ibfk_1` FOREIGN KEY (`Clientes_id_cliente`) REFERENCES `Clientes` (`id_cliente`) ON DELETE CASCADE ON UPDATE CASCADE,
+                  CONSTRAINT `Facturas_ibfk_2` FOREIGN KEY (`Pedidos_id_pedido`) REFERENCES `Pedidos` (`id_pedido`) ON DELETE CASCADE ON UPDATE CASCADE
+                ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+            </pma:table>
+            <pma:table name="Pedidos">
+                CREATE TABLE `Pedidos` (
+                  `id_pedido` int(10) unsigned NOT NULL AUTO_INCREMENT,
+                  `Clientes_id_cliente` int(10) unsigned NOT NULL,
+                  `estado` enum('entregado','en reparto','pagado','cancelado') DEFAULT NULL,
+                  `peso` decimal(6,2) DEFAULT NULL,
+                  `cantidad_producto` int(10) unsigned DEFAULT NULL,
+                  `importe_pedido` decimal(10,2) DEFAULT NULL,
+                  `fecha_pedido` date DEFAULT NULL,
+                  PRIMARY KEY (`id_pedido`),
+                  KEY `Clientes_id_cliente` (`Clientes_id_cliente`),
+                  CONSTRAINT `Pedidos_ibfk_1` FOREIGN KEY (`Clientes_id_cliente`) REFERENCES `Clientes` (`id_cliente`) ON DELETE CASCADE ON UPDATE CASCADE
+                ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+            </pma:table>
+            <pma:table name="Productos">
+                CREATE TABLE `Productos` (
+                  `id_producto` int(10) unsigned NOT NULL AUTO_INCREMENT,
+                  `categoria` enum('hombre','mujer') DEFAULT NULL,
+                  `subcategoria` enum('jean','chaqueta','abrigo','bolso') DEFAULT NULL,
+                  `nom_producto` varchar(50) DEFAULT NULL,
+                  `stok_producto` int(10) unsigned DEFAULT NULL,
+                  PRIMARY KEY (`id_producto`)
+                ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+            </pma:table>
+            <pma:table name="Productos_de_clientes">
+                CREATE TABLE `Productos_de_clientes` (
+                  `Clientes_id_cliente` int(10) unsigned NOT NULL,
+                  `Productos_id_producto` int(10) unsigned NOT NULL,
+                  PRIMARY KEY (`Clientes_id_cliente`,`Productos_id_producto`),
+                  KEY `Productos_id_producto` (`Productos_id_producto`),
+                  CONSTRAINT `Productos_de_clientes_ibfk_1` FOREIGN KEY (`Clientes_id_cliente`) REFERENCES `Clientes` (`id_cliente`) ON DELETE CASCADE ON UPDATE CASCADE,
+                  CONSTRAINT `Productos_de_clientes_ibfk_2` FOREIGN KEY (`Productos_id_producto`) REFERENCES `Productos` (`id_producto`) ON DELETE CASCADE ON UPDATE CASCADE
+                ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+            </pma:table>
+            <pma:table name="Productos_de_pedidos">
+                CREATE TABLE `Productos_de_pedidos` (
+                  `Productos_id_producto` int(10) unsigned NOT NULL,
+                  `Pedidos_id_pedido` int(10) unsigned NOT NULL,
+                  PRIMARY KEY (`Productos_id_producto`,`Pedidos_id_pedido`),
+                  KEY `Pedidos_id_pedido` (`Pedidos_id_pedido`),
+                  CONSTRAINT `Productos_de_pedidos_ibfk_1` FOREIGN KEY (`Productos_id_producto`) REFERENCES `Productos` (`id_producto`) ON DELETE CASCADE ON UPDATE CASCADE,
+                  CONSTRAINT `Productos_de_pedidos_ibfk_2` FOREIGN KEY (`Pedidos_id_pedido`) REFERENCES `Pedidos` (`id_pedido`) ON DELETE CASCADE ON UPDATE CASCADE
+                ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+            </pma:table>
+        </pma:database>
+    </pma:structure_schemas>
+
+    <!--
+    - Database: 'u125313477_meti1'
+    -->
+    <database name="u125313477_meti1">
+        <!-- Table Clientes -->
+        <!-- Table Facturas -->
+        <!-- Table Pedidos -->
+        <!-- Table Productos -->
+        <!-- Table Productos_de_clientes -->
+        <!-- Table Productos_de_pedidos -->
+    </database>
+</pma_xml_export>

@@ -1,0 +1,491 @@
+[
+
+{
+    "type": "database",
+    "name": "u125313477_meti1"
+},
+{
+    "type": "table",
+    "name": "Clientes",
+    "database": "u125313477_meti1",
+    "data": 
+[
+{
+    "id_cliente": "1",
+    "nombre": "Laura",
+    "apellido1": "García",
+    "apellido2": "Pérez",
+    "telefono": "612345678",
+    "direccion": "Calle Sol 12",
+    "cp": "39001",
+    "email": "laura.garcia@example.com"
+},
+{
+    "id_cliente": "2",
+    "nombre": "Carlos",
+    "apellido1": "López",
+    "apellido2": "Santos",
+    "telefono": "699112233",
+    "direccion": "Avenida Castilla 45",
+    "cp": "39002",
+    "email": "carlos.lopez@example.com"
+},
+{
+    "id_cliente": "3",
+    "nombre": "María",
+    "apellido1": "Ruiz",
+    "apellido2": "Gómez",
+    "telefono": "688998877",
+    "direccion": "Calle Alta 8",
+    "cp": "39003",
+    "email": "maria.ruiz@example.com"
+},
+{
+    "id_cliente": "4",
+    "nombre": "Javier",
+    "apellido1": "Martín",
+    "apellido2": "Díaz",
+    "telefono": "677554433",
+    "direccion": "Calle Ronda 22",
+    "cp": "39004",
+    "email": "javier.martin@example.com"
+},
+{
+    "id_cliente": "5",
+    "nombre": "Ana",
+    "apellido1": "Sánchez",
+    "apellido2": "Torres",
+    "telefono": "611223344",
+    "direccion": "Calle Mar 5",
+    "cp": "39005",
+    "email": "ana.sanchez@example.com"
+},
+{
+    "id_cliente": "6",
+    "nombre": "Lucía",
+    "apellido1": "Fernández",
+    "apellido2": "Vega",
+    "telefono": "699887766",
+    "direccion": "Calle Norte 10",
+    "cp": "39006",
+    "email": "lucia.fernandez@example.com"
+},
+{
+    "id_cliente": "7",
+    "nombre": "Pedro",
+    "apellido1": "Gómez",
+    "apellido2": "Lara",
+    "telefono": "644556677",
+    "direccion": "Avenida Libertad 33",
+    "cp": "39007",
+    "email": "pedro.gomez@example.com"
+},
+{
+    "id_cliente": "8",
+    "nombre": "Sofía",
+    "apellido1": "Iglesias",
+    "apellido2": "Mora",
+    "telefono": "655443322",
+    "direccion": "Calle Sur 14",
+    "cp": "39008",
+    "email": "sofia.iglesias@example.com"
+},
+{
+    "id_cliente": "9",
+    "nombre": "Diego",
+    "apellido1": "Navarro",
+    "apellido2": "Cano",
+    "telefono": "622334455",
+    "direccion": "Calle Peña 3",
+    "cp": "39009",
+    "email": "diego.navarro@example.com"
+},
+{
+    "id_cliente": "10",
+    "nombre": "Elena",
+    "apellido1": "Romero",
+    "apellido2": "León",
+    "telefono": "633221144",
+    "direccion": "Calle Río 18",
+    "cp": "39010",
+    "email": "elena.romero@example.com"
+}
+]
+
+}
+,{
+    "type": "table",
+    "name": "Facturas",
+    "database": "u125313477_meti1",
+    "data": 
+[
+{
+    "id_factura": "1",
+    "Pedidos_id_pedido": "1",
+    "Clientes_id_cliente": "1",
+    "descripcion": "Compra ropa",
+    "fecha_factura": "2024-01-11",
+    "sucursal": "Santander",
+    "importe_factura": "120.50"
+},
+{
+    "id_factura": "2",
+    "Pedidos_id_pedido": "2",
+    "Clientes_id_cliente": "2",
+    "descripcion": "Compra chaqueta",
+    "fecha_factura": "2024-01-13",
+    "sucursal": "Madrid",
+    "importe_factura": "45.00"
+},
+{
+    "id_factura": "3",
+    "Pedidos_id_pedido": "3",
+    "Clientes_id_cliente": "3",
+    "descripcion": "Compra varios productos",
+    "fecha_factura": "2024-01-16",
+    "sucursal": "Bilbao",
+    "importe_factura": "210.00"
+},
+{
+    "id_factura": "4",
+    "Pedidos_id_pedido": "4",
+    "Clientes_id_cliente": "4",
+    "descripcion": "Pedido cancelado",
+    "fecha_factura": "2024-01-19",
+    "sucursal": "Barcelona",
+    "importe_factura": "0.00"
+},
+{
+    "id_factura": "5",
+    "Pedidos_id_pedido": "5",
+    "Clientes_id_cliente": "5",
+    "descripcion": "Compra jeans",
+    "fecha_factura": "2024-01-21",
+    "sucursal": "Oviedo",
+    "importe_factura": "90.00"
+},
+{
+    "id_factura": "6",
+    "Pedidos_id_pedido": "6",
+    "Clientes_id_cliente": "6",
+    "descripcion": "Compra abrigo",
+    "fecha_factura": "2024-01-23",
+    "sucursal": "Santander",
+    "importe_factura": "75.00"
+},
+{
+    "id_factura": "7",
+    "Pedidos_id_pedido": "7",
+    "Clientes_id_cliente": "7",
+    "descripcion": "Compra múltiple",
+    "fecha_factura": "2024-01-26",
+    "sucursal": "Madrid",
+    "importe_factura": "260.00"
+},
+{
+    "id_factura": "8",
+    "Pedidos_id_pedido": "8",
+    "Clientes_id_cliente": "8",
+    "descripcion": "Compra bolso",
+    "fecha_factura": "2024-01-29",
+    "sucursal": "Bilbao",
+    "importe_factura": "110.00"
+},
+{
+    "id_factura": "9",
+    "Pedidos_id_pedido": "9",
+    "Clientes_id_cliente": "9",
+    "descripcion": "Compra jean",
+    "fecha_factura": "2024-01-31",
+    "sucursal": "Barcelona",
+    "importe_factura": "40.00"
+},
+{
+    "id_factura": "10",
+    "Pedidos_id_pedido": "10",
+    "Clientes_id_cliente": "10",
+    "descripcion": "Compra chaqueta",
+    "fecha_factura": "2024-02-02",
+    "sucursal": "Oviedo",
+    "importe_factura": "180.00"
+}
+]
+
+}
+,{
+    "type": "table",
+    "name": "Pedidos",
+    "database": "u125313477_meti1",
+    "data": 
+[
+{
+    "id_pedido": "1",
+    "Clientes_id_cliente": "1",
+    "estado": "pagado",
+    "peso": "2.50",
+    "cantidad_producto": "3",
+    "importe_pedido": "120.50",
+    "fecha_pedido": "2024-01-10"
+},
+{
+    "id_pedido": "2",
+    "Clientes_id_cliente": "2",
+    "estado": "entregado",
+    "peso": "1.20",
+    "cantidad_producto": "1",
+    "importe_pedido": "45.00",
+    "fecha_pedido": "2024-01-12"
+},
+{
+    "id_pedido": "3",
+    "Clientes_id_cliente": "3",
+    "estado": "en reparto",
+    "peso": "3.10",
+    "cantidad_producto": "4",
+    "importe_pedido": "210.00",
+    "fecha_pedido": "2024-01-15"
+},
+{
+    "id_pedido": "4",
+    "Clientes_id_cliente": "4",
+    "estado": "cancelado",
+    "peso": "0.80",
+    "cantidad_producto": "1",
+    "importe_pedido": "30.00",
+    "fecha_pedido": "2024-01-18"
+},
+{
+    "id_pedido": "5",
+    "Clientes_id_cliente": "5",
+    "estado": "pagado",
+    "peso": "2.00",
+    "cantidad_producto": "2",
+    "importe_pedido": "90.00",
+    "fecha_pedido": "2024-01-20"
+},
+{
+    "id_pedido": "6",
+    "Clientes_id_cliente": "6",
+    "estado": "entregado",
+    "peso": "1.50",
+    "cantidad_producto": "2",
+    "importe_pedido": "75.00",
+    "fecha_pedido": "2024-01-22"
+},
+{
+    "id_pedido": "7",
+    "Clientes_id_cliente": "7",
+    "estado": "en reparto",
+    "peso": "4.00",
+    "cantidad_producto": "5",
+    "importe_pedido": "260.00",
+    "fecha_pedido": "2024-01-25"
+},
+{
+    "id_pedido": "8",
+    "Clientes_id_cliente": "8",
+    "estado": "pagado",
+    "peso": "2.30",
+    "cantidad_producto": "3",
+    "importe_pedido": "110.00",
+    "fecha_pedido": "2024-01-28"
+},
+{
+    "id_pedido": "9",
+    "Clientes_id_cliente": "9",
+    "estado": "entregado",
+    "peso": "1.10",
+    "cantidad_producto": "1",
+    "importe_pedido": "40.00",
+    "fecha_pedido": "2024-01-30"
+},
+{
+    "id_pedido": "10",
+    "Clientes_id_cliente": "10",
+    "estado": "pagado",
+    "peso": "3.50",
+    "cantidad_producto": "4",
+    "importe_pedido": "180.00",
+    "fecha_pedido": "2024-02-01"
+}
+]
+
+}
+,{
+    "type": "table",
+    "name": "Productos",
+    "database": "u125313477_meti1",
+    "data": 
+[
+{
+    "id_producto": "1",
+    "categoria": "hombre",
+    "subcategoria": "jean",
+    "nom_producto": "Jean Slim Azul",
+    "stok_producto": "50"
+},
+{
+    "id_producto": "2",
+    "categoria": "mujer",
+    "subcategoria": "chaqueta",
+    "nom_producto": "Chaqueta Cuero Negra",
+    "stok_producto": "20"
+},
+{
+    "id_producto": "3",
+    "categoria": "hombre",
+    "subcategoria": "abrigo",
+    "nom_producto": "Abrigo Invierno Gris",
+    "stok_producto": "15"
+},
+{
+    "id_producto": "4",
+    "categoria": "mujer",
+    "subcategoria": "bolso",
+    "nom_producto": "Bolso Marrón Piel",
+    "stok_producto": "40"
+},
+{
+    "id_producto": "5",
+    "categoria": "hombre",
+    "subcategoria": "jean",
+    "nom_producto": "Jean Regular Negro",
+    "stok_producto": "60"
+},
+{
+    "id_producto": "6",
+    "categoria": "mujer",
+    "subcategoria": "abrigo",
+    "nom_producto": "Abrigo Largo Beige",
+    "stok_producto": "25"
+},
+{
+    "id_producto": "7",
+    "categoria": "hombre",
+    "subcategoria": "chaqueta",
+    "nom_producto": "Chaqueta Vaquera Azul",
+    "stok_producto": "30"
+},
+{
+    "id_producto": "8",
+    "categoria": "mujer",
+    "subcategoria": "jean",
+    "nom_producto": "Jean Skinny Azul",
+    "stok_producto": "55"
+},
+{
+    "id_producto": "9",
+    "categoria": "hombre",
+    "subcategoria": "bolso",
+    "nom_producto": "Bolso Deportivo Negro",
+    "stok_producto": "35"
+},
+{
+    "id_producto": "10",
+    "categoria": "mujer",
+    "subcategoria": "chaqueta",
+    "nom_producto": "Chaqueta Roja Casual",
+    "stok_producto": "22"
+}
+]
+
+}
+,{
+    "type": "table",
+    "name": "Productos_de_clientes",
+    "database": "u125313477_meti1",
+    "data": 
+[
+{
+    "Clientes_id_cliente": "1",
+    "Productos_id_producto": "1"
+},
+{
+    "Clientes_id_cliente": "4",
+    "Productos_id_producto": "2"
+},
+{
+    "Clientes_id_cliente": "2",
+    "Productos_id_producto": "3"
+},
+{
+    "Clientes_id_cliente": "3",
+    "Productos_id_producto": "4"
+},
+{
+    "Clientes_id_cliente": "5",
+    "Productos_id_producto": "5"
+},
+{
+    "Clientes_id_cliente": "8",
+    "Productos_id_producto": "6"
+},
+{
+    "Clientes_id_cliente": "6",
+    "Productos_id_producto": "7"
+},
+{
+    "Clientes_id_cliente": "7",
+    "Productos_id_producto": "8"
+},
+{
+    "Clientes_id_cliente": "9",
+    "Productos_id_producto": "9"
+},
+{
+    "Clientes_id_cliente": "10",
+    "Productos_id_producto": "10"
+}
+]
+
+}
+,{
+    "type": "table",
+    "name": "Productos_de_pedidos",
+    "database": "u125313477_meti1",
+    "data": 
+[
+{
+    "Productos_id_producto": "1",
+    "Pedidos_id_pedido": "1"
+},
+{
+    "Productos_id_producto": "2",
+    "Pedidos_id_pedido": "1"
+},
+{
+    "Productos_id_producto": "3",
+    "Pedidos_id_pedido": "2"
+},
+{
+    "Productos_id_producto": "4",
+    "Pedidos_id_pedido": "3"
+},
+{
+    "Productos_id_producto": "5",
+    "Pedidos_id_pedido": "3"
+},
+{
+    "Productos_id_producto": "6",
+    "Pedidos_id_pedido": "4"
+},
+{
+    "Productos_id_producto": "7",
+    "Pedidos_id_pedido": "5"
+},
+{
+    "Productos_id_producto": "8",
+    "Pedidos_id_pedido": "6"
+},
+{
+    "Productos_id_producto": "9",
+    "Pedidos_id_pedido": "7"
+},
+{
+    "Productos_id_producto": "10",
+    "Pedidos_id_pedido": "8"
+}
+]
+
+}
+]

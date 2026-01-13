@@ -5,44 +5,6 @@ Este repositorio contiene el desarrollo completo del sistema de **Gestión de Pe
 
 ---
 
-## 📁 Estructura del Proyecto
-
-```
-📂 modelo-gestion-pedidos/
-├── 📄 MODELADO_BD.pdf                     # Presentación completa del proyecto (PDF principal)
-├── 📂 docs/
-│   ├── informeEstructura.pdf              # Estructura en phpMyAdmin exportada
-│   ├── diagramas/                         # Diagramas en formato imagen
-│   │   ├── modelo_conceptual.png
-│   │   ├── modelo_entidad_relacion.png
-│   │   └── modelo_relacional.png
-│   └── especificaciones/                  # Documentación adicional
-├── 📂 modelos/
-│   ├── modelo_conceptual.drawio           # Modelo conceptual en Draw.io
-│   ├── modelo_entidad_relacion.drawio     # Modelo E/R en Draw.io
-│   ├── modelo_relacional.dbdesigner       # Modelo relacional en DBDesigner
-│   └── modelo_fisico.mwb                  # Modelo físico MySQL Workbench
-├── 📂 sql/
-│   ├── 01_crear_tablas.sql                # Script de creación de tablas
-│   ├── 02_insertar_datos.sql              # Datos de ejemplo
-│   ├── 03_consultas_basicas.sql           # Consultas SELECT simples
-│   ├── 04_actualizaciones.sql             # Consultas UPDATE
-│   ├── 05_eliminaciones.sql               # Consultas DELETE
-│   ├── 06_consultas_multitabla.sql        # Consultas JOIN
-│   └── 07_vistas_procedimientos.sql       # Vistas y procedimientos almacenados
-├── 📂 mongo/
-│   ├── migracion_colecciones.js           # Script de migración a MongoDB
-│   ├── consultas_mongo.js                  # Consultas en MongoDB
-│   └── datos_ejemplo.json                  # Datos en formato JSON
-├── 📂 backups/
-│   ├── backup_completo.sql                # Backup completo de la BD
-│   └── backup_estructura.sql              # Solo estructura
-├── 📂 screenshots/
-│   └── capturas_phpmyadmin/               # Capturas de pantalla de ejecución
-└── README.md
-```
-
----
 
 ## 🎯 Objetivos del Proyecto
 
